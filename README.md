@@ -1,4 +1,4 @@
-# Frequency Division Multiplexing
+1# Frequency Division Multiplexing
 
 
 ## AIM
@@ -31,17 +31,14 @@ At the receiver, each signal is recovered by multiplying the multiplexed signal 
 clc; 
 clear; 
 close;
-
 fs = 50000;
 t = 0:1/fs:0.05;
-
-m1 = 1.7*sin(2*%pi*163*t);
-m2 = 1.8*sin(2*%pi*173*t);
-m3 = 1.9*sin(2*%pi*183*t);
-m4 = 2.0*sin(2*%pi*193*t);
-m5 = 2.1*sin(2*%pi*203*t);
-m6 = 2.2*sin(2*%pi*213*t);
-
+m1 = 5.1*sin(2*%pi*401*t);
+m2 = 5.2*sin(2*%pi*411*t);
+m3 = 5.3*sin(2*%pi*421*t);
+m4 = 5.4*sin(2*%pi*431*t);
+m5 = 5.5*sin(2*%pi*441*t);
+m6 = 5.6*sin(2*%pi*451*t);
 c1 = cos(2*%pi*2000*t);
 c2 = cos(2*%pi*4000*t);
 c3 = cos(2*%pi*6000*t);
@@ -88,6 +85,7 @@ d5 = 2 * d5;
 d6 = 2 * d6;
 
 figure(1);
+gcf().background = -2;
 subplot(3,2,1); plot(t,m1); title("Message 1");
 subplot(3,2,2); plot(t,m2); title("Message 2");
 subplot(3,2,3); plot(t,m3); title("Message 3");
@@ -96,25 +94,33 @@ subplot(3,2,5); plot(t,m5); title("Message 5");
 subplot(3,2,6); plot(t,m6); title("Message 6");
 
 figure(2);
+gcf().background = -2;
 plot(t,fdm); title("Multiplexed FDM");
 
 figure(3);
+gcf().background = -2;
 subplot(3,2,1); plot(t,d1); title("Demod 1");
 subplot(3,2,2); plot(t,d2); title("Demod 2");
 subplot(3,2,3); plot(t,d3); title("Demod 3");
 subplot(3,2,4); plot(t,d4); title("Demod 4");
 subplot(3,2,5); plot(t,d5); title("Demod 5");
 subplot(3,2,6); plot(t,d6); title("Demod 6");
+
 ```
 
 ## OUTPUT WAVEFORM
-<img width="610" height="460" alt="image" src="https://github.com/user-attachments/assets/f5083867-0b2b-4c6c-b26c-82758f2bcfc8" />
+<img width="1919" height="1071" alt="image" src="https://github.com/user-attachments/assets/76032023-72a6-48f7-8e51-97ea30dfdb43" />
 
-<img width="610" height="460" alt="image" src="https://github.com/user-attachments/assets/a04f310f-8b82-4106-8c8b-6aff895e91a7" />
 
-<img width="610" height="460" alt="image" src="https://github.com/user-attachments/assets/0e15cd7b-b241-4f25-9841-8af7b1e62a8d" />
+<img width="1919" height="1091" alt="image" src="https://github.com/user-attachments/assets/34f161b3-99e3-46e6-8264-263d4d830125" />
+
+
+<img width="1919" height="1071" alt="image" src="https://github.com/user-attachments/assets/b3dff400-c2b8-4c99-a8c4-e7534e054842" />
+
 
 ## CALCULATION
+![WhatsApp Image 2025-11-29 at 15 07 56_2a0a6e70](https://github.com/user-attachments/assets/66f82194-3e7d-4d5f-b746-839431b3401f)
+![WhatsApp Image 2025-11-29 at 15 07 57_c26e65d6](https://github.com/user-attachments/assets/46883218-98cb-4f9c-8261-fac98939c5c8)
 
 
 ## RESULT
